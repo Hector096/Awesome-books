@@ -1,1 +1,60 @@
 # Awesome-books
+
+> This is an AWESOME Books Application to add and remove amazing books in real time.
+
+
+## ScreenShots
+![screenshot](./images/screenshot.PNG)
+
+Additional description about the project and its features.
+
+
+
+## Built With
+
+- HTML & CSS
+- Javascript
+- Github
+
+
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+You have a basic understanding of HTML,CSS,JavaScript, Git and Github. 
+
+### Setup
+
+1. Clone the repository with *git clone: [Repository](https://github.com/Hector096/Awesome-books)  
+2. Run *index.html* in for browser.
+
+
+## Authors
+
+- GitHub: [@githubhandle](https://github.com/Hector096)
+- Linkedin: [@linkedinhandle](https://www.linkedin.com/in/vishal-verma-9191b8126/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Hector096/Conference-App/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
