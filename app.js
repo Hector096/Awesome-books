@@ -23,14 +23,12 @@ addBtn.addEventListener('click', () => {
 const removeBook = (key, index) => {
   var newBooks = books.filter(books => books.title != key);
   books = [...newBooks]
-  booksContainer.removeChild(booksContainer.childNodes[index]);
   localStorage.setItem("books", JSON.stringify(books));
+  setItems();
 }
 
 setItems = () => {
-  for (let i = 0; i < booksContainer.children.length; i++) {
-    booksContainer.removeChild(booksContainer.children[i])
-  }
+    booksContainer.innerHTML = '';
   books.forEach((book, index) => {
     let li = document.createElement('li');
     let h2 = document.createElement('h2');
