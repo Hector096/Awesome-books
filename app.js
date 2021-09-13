@@ -5,7 +5,7 @@ const addBtn = document.getElementById('add-btn');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 
-if (JSON.parse(localStorage.getItem('books')).length !== 0) {
+if (JSON.parse(localStorage.getItem('books')) !== null) {
   books = [...books, ...JSON.parse(localStorage.getItem('books'))];
 }
 
@@ -18,7 +18,7 @@ const setItems = () => {
     const h3 = document.createElement('h3');
     h3.textContent = book.author;
     const button = document.createElement('button');
-    button.textContent = 'X';
+    button.textContent = 'Remove';
     button.addEventListener('click', () => {
       const newBooks = books.filter((books) => books.title !== book.title);
       books = [...newBooks];
@@ -33,6 +33,7 @@ const setItems = () => {
 };
 
 addBtn.addEventListener('click', () => {
+ if(title.value && author.value !== null){
   books.push({
     title: title.value,
     author: author.value,
@@ -41,6 +42,7 @@ addBtn.addEventListener('click', () => {
   title.value = '';
   author.value = '';
   setItems();
+ }
 });
 
 setItems();
