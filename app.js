@@ -33,16 +33,16 @@ const setItems = () => {
 };
 
 addBtn.addEventListener('click', () => {
- if(title.value && author.value !== null){
-  books.push({
-    title: title.value,
-    author: author.value,
-  });
-  localStorage.setItem('books', JSON.stringify(books));
-  title.value = '';
-  author.value = '';
-  setItems();
- }
+  if (title.value && author.value !== null) {
+    books.push({
+      title: title.value,
+      author: author.value,
+    });
+    localStorage.setItem('books', JSON.stringify(books));
+    title.value = '';
+    author.value = '';
+    setItems();
+  }
 });
 
 setItems();
