@@ -1,12 +1,27 @@
-let books = [];
+const books = JSON.parse(localStorage.getItem('books')) || [];
 
 const booksContainer = document.getElementById('books');
 const addBtn = document.getElementById('add-btn');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 
-if (JSON.parse(localStorage.getItem('books')) !== null) {
-  books = [...books, ...JSON.parse(localStorage.getItem('books'))];
+class Book {
+  constructor(title, author, uuid) {
+    this.title = title;
+    this.author = author;
+    this.uuid = uuid;
+  }
+
+  addBook() {
+    const book = new Book(this.title, this.author, this.uuid);
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  removeBook() {
+    const index = books.findIndex((book) => book.uuid === this.uuid);
+    books.splice(index, 1);
+  }
 }
 
 const setItems = () => {
@@ -20,8 +35,8 @@ const setItems = () => {
     const button = document.createElement('button');
     button.textContent = 'Remove';
     button.addEventListener('click', () => {
-      const newBooks = books.filter((books) => books.title !== book.title);
-      books = [...newBooks];
+      const bookToRemove = new Book(book.title, book.author);
+      bookToRemove.removeBook();
       localStorage.setItem('books', JSON.stringify(books));
       setItems();
     });
@@ -32,13 +47,12 @@ const setItems = () => {
   });
 };
 
+const getUuid = () => new Date().getTime().toString() + Math.floor(Math.random() * 1000000);
+
 addBtn.addEventListener('click', () => {
   if (title.value && author.value !== null) {
-    books.push({
-      title: title.value,
-      author: author.value,
-    });
-    localStorage.setItem('books', JSON.stringify(books));
+    const book = new Book(title.value, author.value, getUuid());
+    book.addBook();
     title.value = '';
     author.value = '';
     setItems();
