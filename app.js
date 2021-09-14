@@ -6,19 +6,20 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 
 class Book {
-  constructor(title, author) {
+  constructor(title, author, uuid) {
     this.title = title;
     this.author = author;
+    this.uuid = uuid;
   }
 
   addBook() {
-    const book = new Book(this.title, this.author);
+    const book = new Book(this.title, this.author, this.uuid);
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
   removeBook() {
-    const index = books.findIndex((book) => book.title !== this.title);
+    const index = books.findIndex((book) => book.uuid === this.uuid);
     books.splice(index, 1);
   }
 }
@@ -46,9 +47,11 @@ const setItems = () => {
   });
 };
 
+const getUuid = () => new Date().getTime().toString() + Math.floor(Math.random() * 1000000);
+
 addBtn.addEventListener('click', () => {
   if (title.value && author.value !== null) {
-    const book = new Book(title.value, author.value);
+    const book = new Book(title.value, author.value, getUuid());
     book.addBook();
     title.value = '';
     author.value = '';
