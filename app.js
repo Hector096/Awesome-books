@@ -1,12 +1,26 @@
-let books = [];
+let books = JSON.parse(localStorage.getItem('books')) || [];
 
 const booksContainer = document.getElementById('books');
 const addBtn = document.getElementById('add-btn');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 
-if (JSON.parse(localStorage.getItem('books')) !== null) {
-  books = [...books, ...JSON.parse(localStorage.getItem('books'))];
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
+  addBook() {
+    const book = new Book(this.title, this.author);
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  removeBook() {
+    const newBooks = books.filter((books) => books.title !== this.title);
+    books = [...newBooks];
+  }
 }
 
 const setItems = () => {
@@ -20,8 +34,8 @@ const setItems = () => {
     const button = document.createElement('button');
     button.textContent = 'Remove';
     button.addEventListener('click', () => {
-      const newBooks = books.filter((books) => books.title !== book.title);
-      books = [...newBooks];
+      const toRemove = new Book(book.title, book.author);
+      toRemove.removeBook();
       localStorage.setItem('books', JSON.stringify(books));
       setItems();
     });
@@ -34,11 +48,8 @@ const setItems = () => {
 
 addBtn.addEventListener('click', () => {
   if (title.value && author.value !== null) {
-    books.push({
-      title: title.value,
-      author: author.value,
-    });
-    localStorage.setItem('books', JSON.stringify(books));
+    const book = new Book(title.value, author.value);
+    book.addBook();
     title.value = '';
     author.value = '';
     setItems();
