@@ -1,4 +1,4 @@
-let books = JSON.parse(localStorage.getItem('books')) || [];
+const books = JSON.parse(localStorage.getItem('books')) || [];
 
 const booksContainer = document.getElementById('books');
 const addBtn = document.getElementById('add-btn');
@@ -18,8 +18,8 @@ class Book {
   }
 
   removeBook() {
-    const newBooks = books.filter((books) => books.title !== this.title);
-    books = [...newBooks];
+    const index = books.findIndex((book) => book.title !== this.title);
+    books.splice(index, 1);
   }
 }
 
@@ -34,8 +34,8 @@ const setItems = () => {
     const button = document.createElement('button');
     button.textContent = 'Remove';
     button.addEventListener('click', () => {
-      const toRemove = new Book(book.title, book.author);
-      toRemove.removeBook();
+      const bookToRemove = new Book(book.title, book.author);
+      bookToRemove.removeBook();
       localStorage.setItem('books', JSON.stringify(books));
       setItems();
     });
