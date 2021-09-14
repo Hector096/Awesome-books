@@ -9,6 +9,8 @@
 Additional description about the project and its features.
 
 
+## Live Demo
+[live-demo](https://hector096.github.io/Awesome-books/)
 
 ## Built With
 
@@ -33,10 +35,14 @@ You have a basic understanding of HTML,CSS,JavaScript, Git and Github.
 
 
 ## Authors
+:bearded_person: **Hector**
+  - GitHub: [@githubhandle](https://github.com/Hector096)
+  - Linkedin: [@linkedinhandle](https://www.linkedin.com/in/vishal-verma-9191b8126/)
 
-- GitHub: [@githubhandle](https://github.com/Hector096)
-- Linkedin: [@linkedinhandle](https://www.linkedin.com/in/vishal-verma-9191b8126/)
-
+:bearded_person: **Ahmed Omar**
+  - Github: [@Ahmed-Alfarouq](https://github.com/Ahmed-Alfaouq)
+  - LinkedIn: [@LinkedIn](https://www.linkedin.com/in/ahmed-omar912ba9199/)
+  - Twitter: [@twitter](https://twitter.com/mediocre23534)
 
 
 ## 🤝 Contributing
