@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 /* Start Navbar */
 .navbar {
   border: 1px solid;
@@ -15,7 +19,7 @@ form .btn:hover {
 
 /* Start List */
 .books-container {
-  max-height: 300px;
+  max-height: 80vh;
   overflow-y: scroll;
 }
 
