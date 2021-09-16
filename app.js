@@ -13,7 +13,7 @@ const dateSpan = document.getElementById('date-span');
 
 setInterval(() => {
   const currentDate = luxon.DateTime; /* eslint-disable-line no-undef, prefer-destructuring */
-  dateSpan.textContent = currentDate.local().toFormat('FFF');
+  dateSpan.textContent = currentDate.local().toFormat('FF');
 }, 100);
 
 class Book {
