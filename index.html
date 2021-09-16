@@ -41,6 +41,8 @@
       </div>
     </nav>
   </header>
+  <span class="text-end p-3 d-block" id="date-span">
+  </span>
   <div class="container books-container my-5">
     <ul id="books" class="p-0 list-unstyled">
 
@@ -50,6 +52,9 @@
     <label class="display-6 fw-bold mb-3">Add new book</label>
     <input type="text" placeholder="Title" id="title" required/>
     <input type="text" placeholder="Author" id="author" required/>
+    <div class="alert alert-success d-none" id="add-book-alert">
+      <strong>Success!</strong> A new book added
+    </div>
     <button type="submit" id="add-btn" class="btn border-1 border-primary mt-2">
       Add book
     </button>

@@ -9,6 +9,13 @@ const addNavBtn = document.getElementById('add-nav-btn');
 const contactNavBtn = document.getElementById('contact-nav-btn');
 const contactSection = document.getElementById('contact-section');
 const formSection = document.getElementById('form-section');
+const addBookAlert = document.getElementById('add-book-alert');
+const dateSpan = document.getElementById('date-span');
+
+setInterval(() => {
+  const currentDate = new Date();
+  dateSpan.textContent = currentDate.toUTCString();
+}, 100);
 
 class Book {
   constructor(title, author, uuid) {
@@ -96,6 +103,10 @@ addBtn.addEventListener('click', () => {
     title.value = '';
     author.value = '';
     setItems();
+    addBookAlert.classList.remove('d-none');
+    setTimeout(() => {
+      addBookAlert.classList.add('d-none');
+    }, 3000);
   }
 });
 
