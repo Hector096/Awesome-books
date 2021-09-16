@@ -28,11 +28,15 @@ const setItems = () => {
   booksContainer.innerHTML = '';
   books.forEach((book) => {
     const li = document.createElement('li');
+    li.className = 'row';
     const h2 = document.createElement('h2');
     h2.textContent = book.title;
+    h2.className = 'col';
     const h3 = document.createElement('h3');
     h3.textContent = book.author;
+    h3.className = 'col';
     const button = document.createElement('button');
+    button.className = 'btn btn-danger m-3 col-2';
     button.textContent = 'Remove';
     button.addEventListener('click', () => {
       const bookToRemove = new Book(book.title, book.author);
