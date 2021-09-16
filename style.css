@@ -1,6 +1,6 @@
 hr {
-  height: 5px !important;
-  width: 150px;
+  height: 3px !important;
+  width: 200px;
   background-color: #6e5cc2 !important;
   margin: 20px auto;
   opacity: 1 !important;
@@ -19,6 +19,7 @@ form .btn:hover {
 
 li {
   background: white;
+  align-items: center;
 }
 
 li:nth-child(odd) {
