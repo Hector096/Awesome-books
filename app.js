@@ -31,11 +31,8 @@ const setItems = () => {
       const li = document.createElement('li');
       li.className = 'row';
       const h2 = document.createElement('h2');
-      h2.textContent = book.title;
+      h2.textContent = `"${book.title}" by ${book.author}`;
       h2.className = 'col';
-      const h3 = document.createElement('h3');
-      h3.textContent = book.author;
-      h3.className = 'col';
       const button = document.createElement('button');
       button.className = 'btn btn-danger m-3 col-2';
       button.textContent = 'Remove';
@@ -46,7 +43,6 @@ const setItems = () => {
         setItems();
       });
       li.appendChild(h2);
-      li.appendChild(h3);
       li.appendChild(button);
       return booksContainer.appendChild(li);
     });
