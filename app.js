@@ -1,5 +1,4 @@
 const books = JSON.parse(localStorage.getItem('books')) || [];
-
 const booksContainer = document.getElementById('books');
 const addBtn = document.getElementById('add-btn');
 const title = document.getElementById('title');
