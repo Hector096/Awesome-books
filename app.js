@@ -1,5 +1,4 @@
 const books = JSON.parse(localStorage.getItem('books')) || [];
-
 const booksContainer = document.getElementById('books');
 const addBtn = document.getElementById('add-btn');
 const title = document.getElementById('title');
@@ -13,8 +12,8 @@ const addBookAlert = document.getElementById('add-book-alert');
 const dateSpan = document.getElementById('date-span');
 
 setInterval(() => {
-  const currentDate = new Date();
-  dateSpan.textContent = currentDate.toUTCString();
+  const currentDate = luxon.DateTime; /* eslint-disable-line no-undef, prefer-destructuring */
+  dateSpan.textContent = currentDate.local().toFormat('FF');
 }, 100);
 
 class Book {
