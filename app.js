@@ -62,7 +62,7 @@ const setItems = () => {
 const getUuid = () => new Date().getTime().toString() + Math.floor(Math.random() * 1000000);
 
 addBtn.addEventListener('click', () => {
-  if (title.value !== "" && author.value !== "") {
+  if (title.value !== '' && author.value !== '') {
     const book = new Book(title.value, author.value, getUuid());
     book.addBook();
     title.value = '';
