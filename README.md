@@ -4,9 +4,9 @@
 
 
 ## ScreenShots
-![screenshot](./images/screenshot1.PNG)
-![screenshot](./images/screenshot2.PNG)
-![screenshot](./images/screenshot3.PNG)
+![screenshot](./images/screenshot1.png)
+![screenshot](./images/screenshot2.png)
+![screenshot](./images/screenshot3.png)
 
 Additional description about the project and its features.
 
