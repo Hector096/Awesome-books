@@ -12,8 +12,8 @@ const addBookAlert = document.getElementById('add-book-alert');
 const dateSpan = document.getElementById('date-span');
 
 setInterval(() => {
-  const currentDate = new Date();
-  dateSpan.textContent = currentDate.toUTCString();
+  const currentDate = luxon.DateTime; /* eslint-disable-line no-undef, prefer-destructuring */
+  dateSpan.textContent = currentDate.now().toFormat('FF');
 }, 100);
 
 class Book {
