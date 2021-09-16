@@ -49,7 +49,7 @@ You have a basic understanding of HTML,CSS,JavaScript, Git and Github.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Hector096/Conference-App/issues).
+Feel free to check the [issues page](https://github.com/Hector096/Awesome-books/issues).
 
 ## Show your support
 

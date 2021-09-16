@@ -1,7 +1,45 @@
+hr {
+  height: 3px !important;
+  width: 200px;
+  background-color: #6e5cc2 !important;
+  margin: 20px auto;
+  opacity: 1 !important;
+}
+
+form .btn:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Start List */
+.books-container {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
 li {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  width: 10%;
-  margin: 10px;
+  background: white;
+  align-items: center;
+}
+
+li:nth-child(odd) {
+  background: #f3f3f2;
+}
+
+li:hover {
+  background-color: #6e5cc2;
+  color: white;
+}
+
+/* Start Form */
+form input {
+  margin: 10px auto;
+  font-size: 20px;
+  padding: 5px;
+}
+
+form button {
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
 }
