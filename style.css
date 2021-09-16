@@ -1,19 +1,11 @@
-hr {
-  height: 3px !important;
-  width: 200px;
-  background-color: #6e5cc2 !important;
-  margin: 20px auto;
-  opacity: 1 !important;
-}
-
 /* Start Navbar */
 .navbar {
   border: 1px solid;
 }
 
 .navbar .navbar-nav .nav-item {
-border-right: 1px solid;
-margin-right: 5px;
+  border-right: 1px solid;
+  margin-right: 5px;
 }
 
 form .btn:hover {
@@ -27,16 +19,21 @@ form .btn:hover {
   overflow-y: scroll;
 }
 
-li {
+#books li {
   background: white;
   align-items: center;
 }
 
-li:nth-child(odd) {
+#books li:nth-child(odd) {
   background: #f3f3f2;
 }
 
-li:not(.nav-item):hover {
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+#books li:not(.nav-item):hover {
   background-color: #6e5cc2;
   color: white;
 }

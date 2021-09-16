@@ -4,6 +4,11 @@ const booksContainer = document.getElementById('books');
 const addBtn = document.getElementById('add-btn');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+const bookNavBtn = document.getElementById('books-nav-btn');
+const addNavBtn = document.getElementById('add-nav-btn');
+const contactNavBtn = document.getElementById('contact-nav-btn');
+const contactSection = document.getElementById('contact-section');
+const formSection = document.getElementById('form-section');
 
 class Book {
   constructor(title, author, uuid) {
@@ -23,6 +28,33 @@ class Book {
     books.splice(index, 1);
   }
 }
+
+bookNavBtn.addEventListener('click', () => {
+  contactSection.classList.add('d-none');
+  contactSection.classList.remove('active');
+  booksContainer.classList.remove('d-none');
+  booksContainer.classList.add('active');
+  formSection.classList.remove('active');
+  formSection.classList.add('d-none');
+});
+
+addNavBtn.addEventListener('click', () => {
+  contactSection.classList.add('d-none');
+  contactSection.classList.remove('active');
+  booksContainer.classList.add('d-none');
+  booksContainer.classList.remove('active');
+  formSection.classList.remove('d-none');
+  formSection.classList.add('active');
+});
+
+contactNavBtn.addEventListener('click', () => {
+  contactSection.classList.remove('d-none');
+  contactSection.classList.add('active');
+  booksContainer.classList.add('d-none');
+  formSection.classList.add('d-none');
+  formSection.classList.remove('active');
+  booksContainer.classList.remove('active');
+});
 
 const setItems = () => {
   booksContainer.innerHTML = '';

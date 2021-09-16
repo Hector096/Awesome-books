@@ -16,37 +16,37 @@
     <script src="./app.js" defer></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Awesome Books</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse flex-grow-0 flex-shrink-1" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add new</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#">
-              Contact
-            </a>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand h1" href="#">Awesome Books</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0 flex-shrink-1" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#" id="books-nav-btn">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="add-nav-btn">Add new</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="contact-nav-btn">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <h1 class="title text-center mt-4 fw-bold">Awesome Books</h1>
-  <hr/>
+    </nav>
+  </header>
   <div class="container books-container my-5">
     <ul id="books" class="p-0 list-unstyled">
 
     </ul>
   </div>
-  <form action="#" class="d-flex justify-content-center align-items-center flex-column mt-4">
+  <form action="#" class="d-none d-flex justify-content-center align-items-center flex-column mt-4" id="form-section">
     <label class="display-6 fw-bold mb-3">Add new book</label>
     <input type="text" placeholder="Title" id="title" required/>
     <input type="text" placeholder="Author" id="author" required/>
@@ -55,7 +55,7 @@
     </button>
   </form>
 
-  <section class="container contact mt-5">
+  <section class="container contact mt-5 d-none" id="contact-section">
     <h2 class="text-center">Contact Info</h2>
     <p class="text-center">
       Do you have any questions or just want to say "hello"?<br>
@@ -88,7 +88,7 @@
       </li>
     </ul>
   </section>
-  <footer class="p-2 mt-5 text-center">
+  <footer class="p-2 mt-5 text-center footer">
     ©️ Hector and Ahmed Omar, Inc. All rights reserved.
   </footer>
 </html>
