@@ -1,8 +1,9 @@
 hr {
-  height: 5px;
+  height: 5px !important;
   width: 150px;
-  background: #6e5cc2;
+  background-color: #6e5cc2 !important;
   margin: 20px auto;
+  opacity: 1 !important;
 }
 
 form .btn:hover {
@@ -12,7 +13,7 @@ form .btn:hover {
 
 /* Start List */
 .books-container {
-  height: 500px;
+  max-height: 300px;
   overflow-y: scroll;
 }
 
@@ -20,8 +21,8 @@ li {
   background: white;
 }
 
-li:nth-child(odd) { 
-  background: #f3f3f2; 
+li:nth-child(odd) {
+  background: #f3f3f2;
 }
 
 li:hover {
