@@ -16,6 +16,29 @@
     <script src="./app.js" defer></script>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Awesome Books</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0 flex-shrink-1" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add new</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <h1 class="title text-center mt-4 fw-bold">Awesome Books</h1>
   <hr/>
   <div class="container books-container my-5">
@@ -31,4 +54,41 @@
       Add book
     </button>
   </form>
+
+  <section class="container contact mt-5">
+    <h2 class="text-center">Contact Info</h2>
+    <p class="text-center">
+      Do you have any questions or just want to say "hello"?<br>
+      You can reach out to us.
+    </p>
+    <h3 class="w-50 mx-auto my-2">Hector</h3>
+    <ul class="w-50 mx-auto">
+      <li class="nav-item">
+        <a href="mailto:vv96rca@gmail.com">
+          Gmail
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://www.linkedin.com/in/vishal-verma-9191b8126/">
+          LinkedIn
+        </a>
+      </li>
+    </ul>
+    <h3 class="w-50 mx-auto my-2">Ahmed Omar</h3>
+    <ul class="w-50 mx-auto mb-5">
+      <li class="nav-item">
+        <a href="mailto:mediocre23534@gmail.com">
+          Gmail
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://www.linkedin.com/in/ahmed-omar912ba9199/">
+          LinkedIn
+        </a>
+      </li>
+    </ul>
+  </section>
+  <footer class="p-2 mt-5 text-center">
+    ©️ Hector and Ahmed Omar, Inc. All rights reserved.
+  </footer>
 </html>
